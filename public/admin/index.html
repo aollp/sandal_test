@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 대시보드 - (주)산들네트웍스</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- 사이드바 -->
+        <div class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="/images/logo.png" alt="산들네트웍스 로고" class="logo">
+                <div class="sidebar-title">관리자</div>
+            </div>
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-info">
+                    <div class="user-name" id="admin-name">관리자</div>
+                    <div class="user-role" id="admin-role">관리자</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="index.html"><i class="fas fa-tachometer-alt"></i> 대시보드</a>
+                    </li>
+                    <li>
+                        <a href="notice.html"><i class="fas fa-bullhorn"></i> 공지사항 관리</a>
+                    </li>
+                    <li>
+                        <a href="product.html"><i class="fas fa-boxes"></i> 제품 관리</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"><i class="fas fa-envelope"></i> 문의 관리</a>
+                    </li>
+                    <li>
+                        <a href="settings.html"><i class="fas fa-cog"></i> 사이트 설정</a>
+                    </li>
+                    <li class="admin-only">
+                        <a href="users.html"><i class="fas fa-users-cog"></i> 사용자 관리</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- 메인 콘텐츠 -->
+        <div class="admin-content">
+            <!-- 상단 바 -->
+            <div class="admin-topbar">
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="breadcrumb">
+                    <span>대시보드</span>
+                </div>
+                <div class="topbar-right">
+                    <div class="topbar-item">
+                        <button class="btn-icon" id="btn-refresh">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                    <div class="topbar-item">
+                        <button class="btn-icon" id="btn-home">
+                            <i class="fas fa-home"></i>
+                        </button>
+                    </div>
+                    <div class="topbar-item dropdown">
+                        <button class="btn-icon" id="btn-user-menu">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="profile.html"><i class="fas fa-user-circle"></i> 내 프로필</a>
+                            <a href="#" id="btn-logout"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 대시보드 콘텐츠 -->
+            <div class="admin-content-inner">
+                <div class="dashboard">
+                    <div class="dashboard-header">
+                        <h1>대시보드</h1>
+                        <p class="last-update">마지막 업데이트: <span id="last-update-time">로딩 중...</span></p>
+                    </div>
+
+                    <!-- 통계 카드 -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="notice-count">0</div>
+                                <div class="stat-label">공지사항</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-boxes"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="product-count">0</div>
+                                <div class="stat-label">등록 제품</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="contact-count">0</div>
+                                <div class="stat-label">전체 문의</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="new-contact-count">0</div>
+                                <div class="stat-label">새 문의</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 최근 문의 & 공지사항 섹션 생략... -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/admin/common.js"></script>
+    <script src="/js/admin/dashboard.js"></script>
+</body>
+</html>

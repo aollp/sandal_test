@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 로그인 - (주)산들네트웍스</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</head>
+<body>
+    <div class="admin-login-container">
+        <div class="login-box">
+            <div class="login-logo">
+                <img src="/images/logo.png" alt="산들네트웍스 로고">
+            </div>
+            <h2>관리자 로그인</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">아이디</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="username" name="username" placeholder="아이디를 입력하세요" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
+                    </div>
+                </div>
+                <div class="error-message" id="error-message"></div>
+                <button type="submit" class="btn-login">로그인</button>
+            </form>
+            <div class="back-to-site">
+                <a href="/"><i class="fas fa-arrow-left"></i> 홈페이지로 돌아가기</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/admin/login.js"></script>
+</body>
+</html>
