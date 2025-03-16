@@ -178,12 +178,18 @@ img {
     left: 0;
     background-color: var(--white);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 220px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     transition: var(--transition);
     z-index: 100;
+    
+    /* 가로 메뉴로 수정된 스타일 */
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    min-width: 500px;
+    padding: 10px;
 }
 
 .main-nav ul li:hover .submenu {
@@ -192,16 +198,21 @@ img {
     transform: translateY(0);
 }
 
+.submenu li {
+    /* 가로 메뉴 아이템 스타일 */
+    margin-right: 15px;
+}
+
 .submenu li a {
     padding: 10px 15px;
-    border-bottom: 1px solid #eee;
     font-size: 14px;
+    white-space: nowrap;
 }
 
 .submenu li a:hover {
     background-color: #f9f9f9;
     color: var(--primary-color);
-    padding-left: 20px;
+    border-radius: 4px;
 }
 
 .mobile-menu-btn {
